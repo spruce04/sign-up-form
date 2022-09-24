@@ -4,7 +4,7 @@ const passTwo = document.getElementById('confirmed');
 const button = document.getElementById('submitData');
 const targetDiv = document.getElementById('notEqual')
 
-//to be called if passwords are not identical
+//check if passwords are identical
 function checkEquality () {
     if (passOne.value == passTwo.value) {
         targetDiv.textContent = ''
