@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet"href="style.css">
+    <script src="./script.js" defer></script>
 </head>
+
 <body>
   <div class="wrap">
     <div class="segment" id="photo">
@@ -20,41 +22,53 @@
     Unsplash</a> &nbsp;(IMAGE CREDITS)
         </div>
       </div>
+
     <div class="segment" id="form">
+      <div class="flexWrap">
     <div class="ad">
     <p>This is not a real online service! Come travel to Paradise Palms and enjoy the beauty of the sun and sea! Sign up <em>now</em> to inquire!</p>
     What are you waiting for?
-  </div>
+    </div>
   
-   <form action="" method="post">
+  <form action="" method="post" onsubmit="return checkEquality()">
     <div class="formWrap">
     <div class="formSector">
-      <label for="firstName">First Name</label>
-      <input type="text" id="firstName" name="firstName" required>
-      <label for="lastName">Last Name</label>
-      <input type="text" id="lastName" name="lastName" required>
+    <ul>
+      <li><label for="firstName">First Name</label></li>
+      <li><input type="text" id="firstName" name="firstName" required></li>
+    </ul>
+    <ul>
+      <li><label for="lastName">Last Name</label></li>
+      <li><input type="text" id="lastName" name="lastName" required></li>
+    </ul>
     </div>
     <div class="formSector">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-      <label for="phone">Phone Number</label>
-      <input type="tel" id="phone" name="phone" required>
+    <ul>
+      <li><label for="email">Email</label></li>
+      <li><input type="email" id="email" name="email" required></li>
+    </ul>
+    <ul>
+      <li><label for="phone">Phone Number</label></li>
+      <li><input type="tel" id="phone" name="phone" required></li>
+    </ul>
     </div>
     <div class="formSector">
-      <label for="password">Password</label>
-      <input type="password" id="password" name="password" required>
-      <label for="confirmed">Confirm Password</label>
-      <input type="password" id="confirmed" name="confirmed" required>
+    <ul>
+      <li><label for="password">Password</label></li>
+      <li><input type="password" id="password" name="password" required></li>
+    </ul>
+    <ul>
+      <li><label for="confirmed">Confirm Password</label> <div class="notEqual" id="notEqual"></div></li>
+      <li><input type="password" id="confirmed" name="confirmed" required></li>
+    </ul>
     </div>
     </div>
-    <button type="submit">Create Account</button>
-   </form>   
+    <div class="submitButton"><button id="submitData" type="submit">Create Account</button></div>
+  </form></div>   
    <div class="login">
    Already have an accout? <a href="">Log In</a>
   </div>
-  <div class="promo">
-    Made by <a href="https://github.com/spruce04/sign-up-form" target="_blank">spruce04</a>.
-  </div>
+  
   </div>
   </div>
 </body>
